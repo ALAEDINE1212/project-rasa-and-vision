@@ -1,0 +1,80 @@
+version: '3.1'
+
+
+intents:
+  - greet
+  - provide_name
+  - provide_email
+  - cancel_room
+  - book_hotel
+  - affirm
+  - deny
+  - LUXroom
+  - standard
+  - economic
+  - bot
+  - goodbye
+entities:
+  - name
+  - email
+
+slots:
+  name:
+    type: text
+    mappings:
+      - type: from_text
+
+  email:
+    type: text
+    mappings:
+      - type: from_text
+
+responses:
+  utter_greet_info:
+    - text: "Hello! What's your name?"
+
+  utter_get_email:
+    - text: "Can I have your email address, please?"
+
+  utter_thank_you:
+    - text: "Thank you , now  how can i help you !"
+
+  utter_cancel:
+    - text: "Your room booking has been canceled."
+
+  utter_ask_car_rental:
+    - text: "Would you like to book a car rental along with your hotel?"
+
+  utter_acknowledge_car_booking:
+    - text: "Great! I’ll arrange a car rental for you."
+
+  utter_acknowledge_no_car:
+    - text: "Alright! No car rental will be booked."
+
+  utter_type_room:
+    - text: "Which type of room would you like? (LUX, standard, or economic)"
+
+  utter_Luxroom:
+    - text: "You've selected a luxury room."
+
+  utter_standard:
+    - text: "You've selected a standard room."
+
+  utter_economic:
+    - text: "You've selected an economic room."
+  utter_bot:
+    - text: "I'm hotel assistant chatbot , how can i help you? "
+  utter_bye:
+    - text: "bye bye , thank you"
+
+forms:
+  user_info_form:
+    required_slots:
+      - name
+      - email
+
+  user_email_form:
+    required_slots:
+      - email
+
+

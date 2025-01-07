@@ -1,0 +1,30 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_name\"}}]": "user_info_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_name\"}}, {\"active_loop\": {\"name\": \"user_info_form\"}, \"prev_action\": {\"action_name\": \"user_info_form\"}, \"user\": {\"intent\": \"provide_name\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"user_info_form\"}}]": "utter_get_email",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"user_info_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_get_email\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_thank_you\"}, \"slots\": {\"email\": [1.0], \"name\": [1.0]}}]": "action_listen"
+    },
+    "rule_only_slots": [
+      "name",
+      "email"
+    ],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"user_info_form\"}, \"prev_action\": {\"action_name\": \"user_info_form\"}, \"user\": {\"intent\": \"provide_name\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"user_info_form\"}, \"prev_action\": {\"action_name\": \"utter_get_email\"}, \"user\": {\"intent\": \"provide_email\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_get_email\"}}, {\"active_loop\": {\"name\": \"user_info_form\"}, \"prev_action\": {\"action_name\": \"utter_thank_you\"}, \"user\": {\"intent\": \"provide_email\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"utter_thank_you\"}, \"slots\": {\"email\": [1.0], \"name\": [1.0]}}]",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"user_info_form\"}}]",
+      "predicting default action with intent restart",
+      "handling active loops and forms - user_info_form",
+      "predicting default action with intent session_start",
+      "predicting default action with intent back",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"user_info_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_get_email\"}}]"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+version: '3.1'
+
+language: en  # Specify the default language for your chatbot (English in this case)
+
+policies:
+- name: RulePolicy
+- name: MemoizationPolicy
+- name: TEDPolicy
+  max_history: 5
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: DIETClassifier
+  epochs: 100
+- name: EntitySynonymMapper
+- name: ResponseSelector
+- name: FallbackClassifier
+
+assistant_id: 20250107-143838-huge-parody

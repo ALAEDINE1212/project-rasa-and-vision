@@ -1,0 +1,166 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: book_hotel
+  examples: |
+    - I want to book a hotel.
+    - Can you help me find a hotel room?
+    - Book a hotel for me.
+    - I need a hotel room.
+    - Reserve a hotel for my trip.
+    - Help me book a hotel.
+    - Find me a hotel.
+    - I want a room in a hotel.
+    - Can you find a hotel for me?
+    - I need a place to stay.
+    - i want a room
+- intent: LUXroom
+  examples: |
+    - big
+    - luxroom
+    - Luxroom
+    - max
+    - first one
+    - the more expensive
+    - can i get a luxroom
+    - can i get a Luxroom
+    - can i get the first one
+    - the first one sounds good
+    - i want luxroom
+- intent: standard
+  examples: |
+    - normal one
+    - classic
+    - the more reliable
+    - second one
+    - can i get the normal one
+    - can i get the more reliable
+    - can i get second one
+    - can i get the standard
+    - standard
+- intent: economic
+  examples: |
+    - economic
+    - the cheapest
+    - can i get economic
+    - can i get the cheapest
+- intent: provide_name
+  examples: |
+    - My name is [John](name)
+    - I am [Sarah](name)
+    - Call me [Alex](name)
+    - My full name is [John Doe](name)
+    - It's [Sarah Jane](name)
+    - [Alex Brown](name) is my name
+    - my name is [Alae](name)
+    - my name is [Alex](name)
+- intent: provide_email
+  examples: |
+    - My email is [john.doe@gmail.com](email)
+    - You can reach me at [sarah.smith@hotmail.com](email)
+    - Contact me at [alex@gmail.com](email)
+    - Reach me at [alex.brown@example.com](email)
+    - Email is [john_doe123@example.com](email)
+    - My work email is [sarah-smith@company.org](email)
+    - my email is [alaedine@gmail.com](email)
+    - my email is [alax@gmail.com](email)
+- regex: email
+  examples: |
+    - [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+
+- intent: cancel_room
+  examples: |
+   - i want to cancel my booking
+   - cancel
+   - can i cancel ?
+   - can i cancel my booking ?
+   - remove
+   - remove my booking
+- intent: bot
+  examples: |
+   - what are you ? 
+   - are you a bot ? 
+   - who are you ? 
+   - bot? 
+   - are a bot ?
+   - who?

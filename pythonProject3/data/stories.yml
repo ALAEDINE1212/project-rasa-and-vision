@@ -1,0 +1,98 @@
+version: "3.1"
+
+stories:
+  - story: Provide user information and ask for email
+    steps:
+    - intent: greet
+    - action: utter_greet_info
+    - intent: provide_name
+    - action: user_info_form
+    - action: utter_get_email
+    - intent: provide_email
+    - action: user_email_form
+    - action: utter_thank_you
+
+  - story: Cancel room booking
+    steps:
+      - intent: cancel_room
+      - action: utter_cancel
+
+  - story: Book hotel and ask about car rental and LUX
+    steps:
+      - intent: book_hotel
+      - action: utter_ask_car_rental
+      - intent: affirm
+      - action: utter_acknowledge_car_booking
+      - action: utter_type_room
+      - intent: LUXroom
+      - action: utter_Luxroom
+
+
+  - story: Book hotel and get refusal and LUX
+    steps:
+      - intent: book_hotel
+      - action: utter_ask_car_rental
+      - intent: deny
+      - action: utter_acknowledge_no_car
+      - action: utter_type_room
+      - intent: LUXroom
+      - action: utter_Luxroom
+
+
+  - story: Book hotel and ask about car rental and standard
+    steps:
+      - intent: book_hotel
+      - action: utter_ask_car_rental
+      - intent: affirm
+      - action: utter_acknowledge_car_booking
+      - action: utter_type_room
+      - intent: standard
+      - action: utter_standard
+
+
+  - story: Book hotel and get refusal and standard
+    steps:
+      - intent: book_hotel
+      - action: utter_ask_car_rental
+      - intent: deny
+      - action: utter_acknowledge_no_car
+      - action: utter_type_room
+      - intent: standard
+      - action: utter_standard
+
+
+  - story: Book hotel and ask about car rental and economic
+    steps:
+      - intent: book_hotel
+      - action: utter_ask_car_rental
+      - intent: affirm
+      - action: utter_acknowledge_car_booking
+      - action: utter_type_room
+      - intent: economic
+      - action: utter_economic
+
+  - story: Book hotel and get refusal and economic
+    steps:
+      - intent: book_hotel
+      - action: utter_ask_car_rental
+      - intent: deny
+      - action: utter_acknowledge_no_car
+      - action: utter_type_room
+      - intent: economic
+      - action: utter_economic
+  - story:
+    steps:
+        - intent: bot
+        - action: utter_bot
+
+  - story:
+    steps:
+      - intent: goodbye
+      - action: utter_bye
+
+
+
+
+
+
+

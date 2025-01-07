@@ -1,0 +1,14 @@
+{
+  "john": "John",
+  "sarah": "Sarah",
+  "alex": "Alex",
+  "john doe": "John Doe",
+  "sarah jane": "Sarah Jane",
+  "alex brown": "Alex Brown",
+  "john.doe@example.com": "john.doe@example.com",
+  "sarah.smith@example.com": "sarah.smith@example.com",
+  "alex@example.com": "alex@example.com",
+  "alex.brown@example.com": "alex.brown@example.com",
+  "john_doe123@example.com": "john_doe123@example.com",
+  "sarah-smith@company.org": "sarah-smith@company.org"
+}
